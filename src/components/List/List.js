@@ -13,7 +13,7 @@ const List = () => {
       </header>
       <div className="List-description">
         <p>Javascript Interaction Observer API used control video element playback based on each elements visibility</p>
-        <p>The top 10 trending GIFs are pulled as mp4s from GIPHY</p>
+        <p>The top trending GIFs are pulled as mp4s from GIPHY</p>
       </div>
       <div className="List-videos">
         {
