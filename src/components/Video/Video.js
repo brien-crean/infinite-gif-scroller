@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Video.css';
 
 class Video extends Component {
 
@@ -30,18 +31,18 @@ class Video extends Component {
         try {
           entry.intersectionRatio > this.state.prevRatio
             ? this.$video.play()
-            : this.$video.pause();  
+            : this.$video.pause();
           this.setState({ prevRatio: entry.intersectionRatio });
         }
         catch (err) {
           console.log(`ERROR: ${err}`);
-        }  
+        }
       }
       return null;
     })
     return null;
   };
-  
+
   render() {
     const { videoURL } = this.props;
     return (
