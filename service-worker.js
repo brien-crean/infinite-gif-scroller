@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/intersection-observer-api/precache-manifest.0b104e4e4ee5325ef4e118f3d1f6d4ef.js"
+  "/intersection-observer-api/precache-manifest.9181406ef5ef3cb93f83c2de92b81f51.js"
 );
 
 workbox.clientsClaim();
