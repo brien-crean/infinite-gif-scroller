@@ -1,56 +1,40 @@
-import React, { Component } from 'react';
+import React, { useRef, useEffect } from 'react';
 import './Video.css';
 
-class Video extends Component {
+const Video = (props) => {
+  const videoRef = useRef(null);
 
-  constructor(props) {
-    super(props)
-    this.state = {
-      prevRatio: 0.0,
-    }
-  }
-
-  componentDidMount() {
-    this.createObserver();
-  }
-
-  createObserver = () => {
-    let options = {
-      root: null, // viewport for checking visiblity of the target - browser if null or not specified
+  useEffect(() => {
+    const options = {
+      root: null, // viewport for checking visiblity of the target - window if null or not specified
       rootMargin: "0px",
-      threshold: 0.9 // < 90% of the element is viewable playback pauses
+      threshold: 0.9 // < 90% of the element is viewable trigger callback
     };
-    let observer = new IntersectionObserver(this.handleIntersect, options);
-    observer.observe(this.$video);
-  };
 
-  // executed when threshold is crossed
-  handleIntersect = (entries, observer) => {
-    entries.map((entry) => {
-      if (this.$video.readyState === 4) {
-        try {
-          entry.intersectionRatio > this.state.prevRatio
-            ? this.$video.play()
-            : this.$video.pause();
-          this.setState({ prevRatio: entry.intersectionRatio });
+    const playBackObserver = new IntersectionObserver((entries) => {
+      entries.map((entry) => {
+        if (videoRef.current.readyState === 4) {
+          try {
+            entry.intersectionRatio > 0.9
+              ? videoRef.current.play()
+              : videoRef.current.pause();
+          }
+          catch (err) {
+            console.log(`ERROR: ${err}`);
+          }
         }
-        catch (err) {
-          console.log(`ERROR: ${err}`);
-        }
-      }
-      return null;
-    })
-    return null;
-  };
+        return null;
+      })
+    }, options);
 
-  render() {
-    const { videoURL } = this.props;
-    return (
-      <video ref={(video) => { this.$video = video; }} className="Video" loop muted autoPlay>
-          <source type="video/mp4" src={ videoURL } />
-      </video>
-    );
-  }
+    playBackObserver.observe(videoRef.current);
+  })
+  console.log(videoRef)
+  return (
+    <video ref={videoRef} className="Video" loop muted autoPlay>
+      <source type="video/mp4" src={props.videoURL} />
+    </video>
+  )
 }
 
 export default Video;

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext } from 'react';
 import Video from '../Video/Video';
 import AppContext from '../../AppContext';
 import './List.css';
@@ -17,10 +17,10 @@ const List = () => {
       </div>
       <div className="List-videos">
         {
-          gifs ?
-            gifs.map(gif => (
-              <Video key={gif.id} videoURL={gif.images.original_mp4.mp4} />
-            ))
+          gifs
+            ? gifs.map(gif => (
+                <Video key={gif.id} videoURL={gif.images.original_mp4.mp4} />
+              ))
             : null
         }
       </div>
