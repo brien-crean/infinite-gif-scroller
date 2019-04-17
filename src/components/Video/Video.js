@@ -1,5 +1,11 @@
 import React, { useRef, useEffect } from 'react';
-import './Video.css';
+import styled from 'styled-components';
+
+const StyledVideo = styled.video`
+  width: 500px;
+  height: 200px;
+  margin-bottom: 50px;
+`;
 
 const Video = (props) => {
   const videoRef = useRef(null);
@@ -29,11 +35,11 @@ const Video = (props) => {
 
     playBackObserver.observe(videoRef.current);
   })
-  console.log(videoRef)
+
   return (
-    <video ref={videoRef} className="Video" loop muted autoPlay>
+    <StyledVideo ref={videoRef} loop muted autoPlay>
       <source type="video/mp4" src={props.videoURL} />
-    </video>
+    </StyledVideo>
   )
 }
 

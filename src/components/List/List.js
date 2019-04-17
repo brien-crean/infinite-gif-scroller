@@ -1,21 +1,32 @@
 import React, { useContext } from 'react';
+import styled from 'styled-components';
 import Video from '../Video/Video';
+import Header from '../Header/Header';
+import Button from './Button';
 import AppContext from '../../AppContext';
-import './List.css';
+
+const ListContainer = styled.div`
+  text-align: center;
+`;
+
+const VideoList = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
 
 const List = () => {
   const context = useContext(AppContext);
   const { gifs } = context.state;
   return (
-    <div className="List">
-      <header className="List-header">
-        <h1 className="List-title">Infinite Scroller using the Interaction Observer API</h1>
-      </header>
-      <div className="List-description">
+    <ListContainer>
+      <Header />
+      <div>
         <p>Javascript Interaction Observer API used control video element playback based on each elements visibility</p>
         <p>The top trending GIFs are pulled as mp4s from GIPHY</p>
       </div>
-      <div className="List-videos">
+      <VideoList>
         {
           gifs
             ? gifs.map(gif => (
@@ -23,9 +34,9 @@ const List = () => {
               ))
             : null
         }
-      </div>
-      <button className="Fetch-gifs" onClick={context.fetchGIFs}>More...</button>
-    </div>
+        <Button onClick={context.fetchGIFs}>More...</Button>
+      </VideoList>
+    </ListContainer>
   )
 }
 
