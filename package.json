@@ -1,7 +1,7 @@
 {
   "name": "intersection-observer-api",
   "version": "0.1.0",
-  "homepage": "https://brien-crean.github.io/intersection-observer-api/",
+  "homepage": "https://brien-crean.github.io/infinite-gif-scroller/",
   "private": true,
   "dependencies": {
     "gh-pages": "^2.0.1",
