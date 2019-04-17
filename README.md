@@ -1,4 +1,6 @@
-# intersection-observer-api and React Hooks
+# Infinite GIF Scroller   
+
+### Using the intersection-observer-api and React Hooks
 
 - Simple project to explore the features of the Javascript Intersection Observer API with ReactJS
 - App pulls the top ten trending GIFs as mp4s from GIPHY
