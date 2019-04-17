@@ -1,11 +1,11 @@
 {
-  "main.js": "/intersection-observer-api/static/js/main.a3b147a6.chunk.js",
-  "main.js.map": "/intersection-observer-api/static/js/main.a3b147a6.chunk.js.map",
-  "runtime~main.js": "/intersection-observer-api/static/js/runtime~main.261c4e15.js",
-  "runtime~main.js.map": "/intersection-observer-api/static/js/runtime~main.261c4e15.js.map",
-  "static/js/2.8bd05b70.chunk.js": "/intersection-observer-api/static/js/2.8bd05b70.chunk.js",
-  "static/js/2.8bd05b70.chunk.js.map": "/intersection-observer-api/static/js/2.8bd05b70.chunk.js.map",
-  "index.html": "/intersection-observer-api/index.html",
-  "precache-manifest.d8979467cadb8d5bb923fc43e74742fa.js": "/intersection-observer-api/precache-manifest.d8979467cadb8d5bb923fc43e74742fa.js",
-  "service-worker.js": "/intersection-observer-api/service-worker.js"
+  "main.js": "/infinite-gif-scroller/static/js/main.1bdca0e1.chunk.js",
+  "main.js.map": "/infinite-gif-scroller/static/js/main.1bdca0e1.chunk.js.map",
+  "runtime~main.js": "/infinite-gif-scroller/static/js/runtime~main.665b984e.js",
+  "runtime~main.js.map": "/infinite-gif-scroller/static/js/runtime~main.665b984e.js.map",
+  "static/js/2.da6d7110.chunk.js": "/infinite-gif-scroller/static/js/2.da6d7110.chunk.js",
+  "static/js/2.da6d7110.chunk.js.map": "/infinite-gif-scroller/static/js/2.da6d7110.chunk.js.map",
+  "index.html": "/infinite-gif-scroller/index.html",
+  "precache-manifest.d204f8a03e78eabd6c73fd63441895e5.js": "/infinite-gif-scroller/precache-manifest.d204f8a03e78eabd6c73fd63441895e5.js",
+  "service-worker.js": "/infinite-gif-scroller/service-worker.js"
 }

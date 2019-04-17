@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/intersection-observer-api/precache-manifest.d8979467cadb8d5bb923fc43e74742fa.js"
+  "/infinite-gif-scroller/precache-manifest.d204f8a03e78eabd6c73fd63441895e5.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/intersection-observer-api/index.html", {
+workbox.routing.registerNavigationRoute("/infinite-gif-scroller/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
