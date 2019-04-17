@@ -4,7 +4,6 @@ import Video from '../Video/Video';
 import Header from '../Header/Header';
 import Observable from './Observable';
 import AppContext from '../../AppContext';
-import { link } from 'fs';
 
 const ListContainer = styled.div`
   text-align: center;

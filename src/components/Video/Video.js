@@ -47,3 +47,7 @@ const Video = (props) => {
 }
 
 export default Video;
+
+Video.defaultProps = {
+  videoURL: ''
+}
