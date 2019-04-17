@@ -5,7 +5,7 @@ const AppContext = createContext();
 class AppProvider extends Component {
   state = {
     gifs: [],
-    offset: 0
+    limit: 10
   }
 
   componentDidMount() {
@@ -13,10 +13,12 @@ class AppProvider extends Component {
   }
 
   fetchGIFs = () => {
-    fetch(`https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=10&offset=${this.state.offset}`)
+    fetch(`https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=${this.state.limit}`)
       .then(response => response.json())
       .then(data => {
-        this.setState({ gifs: [...this.state.gifs,...data.data], offset: data.pagination.offset + 10 })
+        console.log('get the next 10 GIFs')
+        console.log(data.data)
+        this.setState({ gifs: data.data, limit: data.pagination.count + 10 })
       })
   }
 

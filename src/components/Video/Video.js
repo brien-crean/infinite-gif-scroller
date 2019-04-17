@@ -34,6 +34,9 @@ const Video = (props) => {
     }, options);
 
     playBackObserver.observe(videoRef.current);
+
+    // cleanup
+    return () => { playBackObserver.unobserve(videoRef.current) }
   })
 
   return (
